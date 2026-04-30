@@ -1,0 +1,9 @@
+{
+  "name":        "picasp-hcsr04",
+  "version":     "1.0.0",
+  "description": "Librería para sensor ultrasónico HC-SR04 — PICasp/XC8 compatible",
+  "author":      "PICasp",
+  "license":     "MIT",
+  "chips":       ["pic16f", "pic18f"],
+  "keywords":    ["hcsr04", "ultrasonico", "distancia", "sensor"]
+}
