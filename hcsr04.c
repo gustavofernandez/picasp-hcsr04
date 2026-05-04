@@ -1,8 +1,7 @@
 // ============================================================
 //  hcsr04.c — Sensor ultrasónico HC-SR04 para PICasp
-//  Versión: 1.0.0
+//  Versión: 1.1.0
 // ============================================================
-
 #include "hcsr04.h"
 
 // ── Estado interno del sensor ─────────────────────────────────
@@ -48,3 +47,11 @@ uint16_t HCSR04_readInch(void) {
     if (duration == 0) return 0;
     return (uint16_t)(duration / 148UL);
 }
+
+// ── Instancia global del objeto ───────────────────────────────
+HCSR04_t HCSR04 = {
+    .begin    = HCSR04_begin,
+    .readCm   = HCSR04_readCm,
+    .readMm   = HCSR04_readMm,
+    .readInch = HCSR04_readInch,
+};
